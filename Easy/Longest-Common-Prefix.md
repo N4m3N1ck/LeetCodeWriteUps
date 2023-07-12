@@ -15,3 +15,11 @@ class Solution:
                 return last_prefix
 ```
 We can add one letter from the first word in the list to the prefix while all other words have this prefix. When we run out of letters we return the first word. We keep going while the prefix doesn't satisfy the condition and return last correct prefix
+## Solution 2 (not recommended)
+```python
+import os
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str: 
+        return os.path.commonprefix(strs)
+```
+This solution works fine as well, but it isn't an algorithmic way to solve the problem. It is also a slow way
