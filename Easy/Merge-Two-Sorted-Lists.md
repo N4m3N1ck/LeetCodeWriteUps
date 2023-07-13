@@ -12,3 +12,4 @@ Let's say we have to lists: [1,2,4] and [1,3,4]
 5. cur_1 = 4, cur_2 = 4, smallest = 4. We will add cur_1 to the list [1,1,2,3,4]
 6. cur_1 = None, cur_2 = 4, cur_1 is None so we add cur_2 to the list [1,1,2,3,4,4]
 7. cur_1 = None, cur_2 = None, both variables are None so we return our list.
+## Code
