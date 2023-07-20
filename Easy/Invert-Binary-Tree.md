@@ -17,6 +17,7 @@ class Solution:
         return root
 ```
 # Depth First Search
+We can create a stack to implement DFS traversal and swap children of each node we visit.
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
