@@ -39,3 +39,26 @@ class Solution:
 
         return root
 ```
+# Breadth First Search
+We can do the same thing as DFS but pop the element from the beginning and not the end.
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if root == None:
+            return None
+        queue = [root]
+        cur_root = root
+        while len(queue) > 0:
+            cur_root = queue.pop(0)
+            cur_root.right, cur_root.left = cur_root.left, cur_root.right
+            if(cur_root.right != None): queue.append(cur_root.right)
+            if(cur_root.left != None): queue.append(cur_root.left)
+
+        return root
+```
