@@ -23,3 +23,20 @@ class Solution:
         return 2*sum(set(nums))-sum(nums)
 ```
 # XOR
+Wen can use an operation like XOR to calculate the target number. For example: we have an array [5,5,1]. 5^5 = 0; 0^1 = 1. 1 is the target
+```python
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        val = 0
+        for i in nums:
+            val ^= i
+        return val
+```
+We can improve the algorithm by using nums[0] instead of val:
+```python
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        for i in range(1,len(nums)):
+            nums[0] ^= nums[i]
+        return nums[0]
+```
