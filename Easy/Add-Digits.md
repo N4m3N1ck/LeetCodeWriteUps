@@ -69,11 +69,8 @@ Every ninth number has the same output: d(39) = d(30) = d(21) = d(12) = d(3) = 3
 ```python
 class Solution:
     def addDigits(self, num: int) -> int:
-        if num==0:
+        if num==0: 
             return 0
-        num %=9
-        if num==0:
-            return 9
-        return num
+        return 1 + (num - 1) % 9;
 ```
-This code will firstly check if num is zero and return 0, otherwise num is equal to num%9 to fit it into the pattern above. If num is zero it means that the result is the last element of the [1,2,3,4,5,6,7,8,9] sequence (9%9 = 0). Otherwise num is the answer to the problem
+What this code does i that it checks if number is zero and returns zero if it is the case. If it isn't we return 1 + (num - 1) % 9. This is almost equal num%9 except when num is equal to 9. When num is not nine it is the same as calculating num%9 and getting value out of this sequence: [0,1,2,3,4,5,6,7,8,9]. But we dont want to return zero for num=9, which can be fixed by subtracting one away from num which returns the remainder shifted to left by one. And then we add one to the result and get the answer.
