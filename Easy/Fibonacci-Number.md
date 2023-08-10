@@ -6,3 +6,12 @@ class Solution:
         if n<=1: return n
         return self.fib(n-1)+self.fib(n-2)
 ```
+We can also sovle the problem using DP
+```python
+class Solution:
+    def fib(self, n: int):
+        a,b = 0,1
+        for i in range(n):
+            a, b = b, a+b
+        return a
+```
