@@ -1,5 +1,4 @@
 # Isomorphic Strings
-# Solution 1
 We can go through each string and check if there is only one letter from another representing the current letter. We can do it by creating two dictionaries and looping through two of the strings
 ```python
 class Solution:
