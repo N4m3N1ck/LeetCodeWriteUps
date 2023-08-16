@@ -20,3 +20,22 @@ class Solution:
                     return False
         return True
 ```
+Here is a way to solve the problem with only one for loop:
+```python
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        d = {}
+        d2 = {}
+        for i in range(len(s)):
+            if s[i] not in d:
+                d[s[i]] = t[i]
+            else:
+                if d[s[i]] != t[i]:
+                    return False
+            if t[i] not in d2:
+                d2[t[i]] = s[i]
+            else:
+                if d2[t[i]] != s[i]:
+                    return False
+        return True
+```
