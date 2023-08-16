@@ -12,7 +12,7 @@ class Solution:
                 ar.append(i)
         return ar
 ```
-# Solution
+# Solution 2
 Each element in the array will point at an index inside the array. We can mark off each index we see in the array. The indexes that were not marked are the numbers that weren't included. We can use the minus sign as the marker and check for all the positive indexes in the end.
 ```python
 class Solution:
