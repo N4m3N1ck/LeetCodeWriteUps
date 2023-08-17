@@ -1,4 +1,5 @@
 # Remove Nth Node From End Of List
+# Solution 1
 We can calculate the length of the linked list and see what n is from the start. After that we will loop up to the element before n and assign next value of the element to next.next
 ```python
 # Definition for singly-linked list.
