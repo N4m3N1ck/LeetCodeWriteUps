@@ -10,3 +10,9 @@ class Solution:
             x*=3
         return False
 ```
+# Solution 2: O(1)
+```python
+class Solution:
+    def isPowerOfThree(self, n: int) -> bool:
+        return n > 0 and 3**19 % n == 0
+```
