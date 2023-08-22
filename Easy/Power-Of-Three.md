@@ -1,5 +1,6 @@
 # Power Of Three
 # Solution 1: linear
+We can raise three to all the powers while it's less than n and check if it's equal to n
 ```python
 class Solution:
     def isPowerOfThree(self, n: int) -> bool:
@@ -11,6 +12,7 @@ class Solution:
         return False
 ```
 # Solution 2: O(1)
+3**19 is the largest power of three. It's only divisible by numbers that are also a power of three only
 ```python
 class Solution:
     def isPowerOfThree(self, n: int) -> bool:
