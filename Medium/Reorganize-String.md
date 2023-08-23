@@ -1,4 +1,5 @@
 # Reogranize String
+https://www.youtube.com/watch?v=2g_b1aYTHeg
 ```python
 class Solution:
     def reorganizeString(self, s: str) -> str:
