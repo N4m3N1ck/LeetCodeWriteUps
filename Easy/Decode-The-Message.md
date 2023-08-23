@@ -18,3 +18,19 @@ class Solution:
                 decode += alphabet[x.index(i)]
         return decode
 ```
+# Solution 2
+```python
+class Solution:
+    def decodeMessage(self, key: str, message: str) -> str:
+        dic = {' ': ' '}
+        i = 0
+        ans = ""
+        alphabet = "abcdefghijklmnopqrstuvwxyz"
+        for j in key:
+            if j not in dic:
+                dic[j] = alphabet[i]
+                i += 1
+        for j in message:
+            ans += dic[j]
+        return ans
+```
