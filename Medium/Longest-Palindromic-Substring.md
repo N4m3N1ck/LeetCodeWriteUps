@@ -21,20 +21,20 @@ class Solution:
                 longest_length = current_length
                 longest_left_ptr = l
                 longest_right_ptr = r
-        for i in range(len(s)-1):
-            l, r = i, i + 1
-            current_length = 2
-            if s[l] == s[r]:
-                while l > 0 and r < len(s) - 1:
-                    if s[l - 1] == s[r + 1]:
-                        l -= 1
-                        r += 1
-                        current_length += 2
-                    else:
-                        break
-                if current_length > longest_length:
-                    longest_length = current_length
-                    longest_left_ptr = l
-                    longest_right_ptr = r
+            if i != len(s) - 1:
+                l, r = i, i + 1
+                current_length = 2
+                if s[l] == s[r]:
+                    while l > 0 and r < len(s) - 1:
+                        if s[l - 1] == s[r + 1]:
+                            l -= 1
+                            r += 1
+                            current_length += 2
+                        else:
+                            break
+                    if current_length > longest_length:
+                        longest_length = current_length
+                        longest_left_ptr = l
+                        longest_right_ptr = r
         return s[longest_left_ptr:longest_right_ptr+1]
 ```
