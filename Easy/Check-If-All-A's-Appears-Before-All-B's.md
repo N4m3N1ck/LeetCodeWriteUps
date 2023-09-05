@@ -1,3 +1,4 @@
+# Solution 1
 ```python
 class Solution:
     def checkString(self, s: str) -> bool:
@@ -9,4 +10,10 @@ class Solution:
                 first_b = i
                 break
         return "a" not in s[first_b:]
+```
+# Solution 2
+```python
+class Solution:
+    def checkString(self, s: str) -> bool:
+        return "ba" not in s
 ```
