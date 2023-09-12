@@ -1,0 +1,15 @@
+# Maximum Value of a String in an Array
+```python
+class Solution:
+    def maximumValue(self, strs: List[str]) -> int:
+        max_s = 0
+        for i in strs:
+            x = 0
+            if i.isnumeric():
+                x = int(i)
+            else:
+                x = len(i)
+            if x > max_s:
+                max_s = x
+        return max_s
+```
