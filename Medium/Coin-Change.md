@@ -1,4 +1,5 @@
 # Coin Change
+This is a DP problem, so we can calculate the min amount of coins to add to all amounts between 0 and amount. To make up amount of 0, we take zero coins. For the next elements we will try each of the coins, subtract it from current amount and find the corresponding amount in the previous elements of dp. The one with smallest amount of coins is the best choice.
 ```python
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
