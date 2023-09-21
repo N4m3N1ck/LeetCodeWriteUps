@@ -1,6 +1,5 @@
 # Longest Increasing Subsequence
-# Solution 1 - I have no idea how it works
-Here, I loop through dp and loop through nums in reverse. The last element of nums has a max subsequence of 1, itself. The previous element will be the start of subsequence either one (itself) or there is a smaller element in front of it. We will loop through all the elements after it that are smaller and get the largest dp value among those elements. We will add one to this value to include the current element. The max of dp is the longest increasing subsequence.
+Here, I loop through dp and loop through nums in reverse. The last element of nums has a max subsequence of 1, itself. The previous element will be the start of the subsequence either one (itself) or there is a smaller element in front of it. We will loop through all the elements after it that are smaller and get the largest dp value among those elements. We will add one to this value to include the current element. The max of dp is the longest increasing subsequence.
 ```python
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
