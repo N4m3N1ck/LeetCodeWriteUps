@@ -1,3 +1,4 @@
+# Buy Two Chocolates
 ```python
 class Solution:
     def buyChoco(self, prices: List[int], money: int) -> int:
