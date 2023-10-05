@@ -12,3 +12,16 @@ class Solution:
                 ans.append(i)
         return ans
 ```
+# Solution 2 - set theory
+We can check if one set is a subset of another one by using <=
+```python
+class Solution:
+    def findWords(self, words: List[str]) -> List[str]:
+        r1, r2, r3 = set('qwertyuiop'), set('asdfghjkl'), set('zxcvbnm')
+        ans = []
+        for i in words:
+            s = set(i.lower())
+            if s <= r1 or s <= r2 or s <= r3:
+                ans.append(i)
+        return ans
+```
