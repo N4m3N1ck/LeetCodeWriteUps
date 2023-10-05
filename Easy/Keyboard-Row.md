@@ -17,7 +17,7 @@ We can check if one set is a subset of another one by using <=
 ```python
 class Solution:
     def findWords(self, words: List[str]) -> List[str]:
-        r1, r2, r3 = set('qwertyuiop'), set('asdfghjkl'), set('zxcvbnm')
+        r1, r2, r3 = set("qwertyuiop"), set("asdfghjkl"), set("zxcvbnm")
         ans = []
         for i in words:
             s = set(i.lower())
