@@ -1,4 +1,5 @@
 # 3Sum
+We can sort the array, and for each element we can solve the two sum II problem, where the left pointer is the one right to the element and the right pointer is in the end of the array. We can avoid adding same answers to ans by checking if the previous element is not the same as the current element. We can also move l and r pointers of current element when we find 3 sum until they are not the same as they were.
 ```python
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
