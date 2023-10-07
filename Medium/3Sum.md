@@ -1,4 +1,4 @@
-First attempt:
+# 3Sum
 ```python
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
@@ -14,8 +14,11 @@ class Solution:
                     elif nums[l] + nums[r] < -nums[i]:
                         l += 1
                     else:
-                        if [nums[i], nums[l], nums[r]] not in ans:
-                            ans.append([nums[i], nums[l], nums[r]])
+                        ans.append([nums[i], nums[l], nums[r]])
+                        while l < r and nums[l] == nums[l + 1]:
+                            l += 1
+                        while l < r and nums[r] == nums[r - 1]:
+                            r -= 1
                         l += 1
                         r -= 1
         return ans
