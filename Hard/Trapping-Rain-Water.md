@@ -16,3 +16,20 @@ class Solution:
             total += max(0, min(max_left,max_right) - height[i])
         return total
 ```
+# O(n^2) optimized (Timeout)
+Instead of calculating max_left on each step, we can store it and update it for each next element.
+```python
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        total = 0
+        max_left = 0
+        for i in range(len(height)):
+            max_right = 0
+            for j in range(i + 1,len(height)):
+                if height[j] > max_right:
+                    max_right = height[j]
+            total += max(0, min(max_left,max_right) - height[i])
+            if height[i] > max_left:
+                max_left = height[i]
+        return total
+```
