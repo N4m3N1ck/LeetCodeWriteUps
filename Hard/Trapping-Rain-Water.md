@@ -33,3 +33,24 @@ class Solution:
                 max_left = height[i]
         return total
 ```
+# O(n) Solution
+We can create two extra arrays: max_left_ar and max_right_ar. In these arrays we will store the max to the left and max to the right heights for each index. We can then use these values in the same way as before.
+```python
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        max_left = 0
+        max_right = 0
+        max_left_ar = [0]*len(height)
+        max_right_ar = [0]*len(height)
+        for i in range(len(height)):
+            max_left_ar[i] = max_left
+            if height[i] > max_left:
+                max_left = height[i]
+            max_right_ar[len(height) - 1 - i] = max_right
+            if height[len(height) - 1 - i] > max_right:
+                max_right = height[len(height) - 1 - i]
+        total = 0
+        for i in range(len(height)):
+            total += max(0,min(max_left_ar[i],max_right_ar[i]) - height[i])
+        return total
+```
