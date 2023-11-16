@@ -9,8 +9,6 @@ class Solution:
             return False
         for i in range(1, len(nums)):
             nums[i] = max(0, nums[i], nums[i-1] - 1)
-            if nums[i] != 0:
-                pass
             if nums[i - 1] == 0:
                 zero_count = 0
                 x = i - 1
