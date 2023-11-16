@@ -1,4 +1,5 @@
 # Binary Tree Level Order Traversal
+We will use DFS to solve this problem. In cur, we will store the nodes of the current level, in to_add, we will store all the children in the nodes of the current level. The first level of a binary tree is the root node, so we will add it to the queue. We will pop nodes in the queue (which represents the current level) one by one, and add their children to the to_add list. After there are no nodes in the queue left( the level  is traversed), we will add the cur array to ans. We will add all the nodes from to_add array which represent the next level.
 ```python
 # Definition for a binary tree node.
 # class TreeNode:
