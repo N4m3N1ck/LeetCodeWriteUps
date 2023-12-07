@@ -3,8 +3,8 @@ Odd number ends with an odd digit. This is the only requirement for an odd numbe
 ```python
 class Solution:
     def largestOddNumber(self, num: str) -> str:
-        for i in range(len(num)):
-            if num[len(num) - i - 1] in "13579":
-                return num[:len(num) - i]
+        for i in range(len(num), 0, -1):
+            if num[i - 1] in {"1","3","5","7","9"}:
+                return num[:i]
         return ""
 ```
