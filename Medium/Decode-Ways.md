@@ -1,5 +1,6 @@
 # Decode Ways
 ## DFS Solution
+Number 12 can be decoded as AB or as L. The number of ways to decode a string is the number of ways to decode the string from the next letter, plus the number of ways to decode the string from the second next letter IF the first plus second letter make a number less than 26. If the first letter is zero, no combinations are possible. There is only one way to decode a string of the length one or less.
 ```python
 class Solution:
     def numDecodings(self, s: str) -> int:
