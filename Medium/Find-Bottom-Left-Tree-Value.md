@@ -9,19 +9,15 @@
 class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
         if root == None:
-            return
-        queue = [(root, 0)]
-        current_row = []
-        current_depth = 0
+            return None
+        queue = [root]
+        last = root
         while queue:
             cur = queue.pop(0)
-            if cur[1] > current_depth:
-                current_row = []
-                current_depth += 1
-            current_row.append(cur)
-            if cur[0].left:
-                queue.append((cur[0].left,cur[1] + 1))
-            if cur[0].right:
-                queue.append((cur[0].right, cur[1] + 1))
-        return current_row[0][0].val
+            last = cur
+            if cur.right:
+                queue.append(cur.right)
+            if cur.left:
+                queue.append(cur.left)
+        return last.val
 ```
